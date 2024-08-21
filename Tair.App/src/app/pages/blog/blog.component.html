@@ -1,0 +1,36 @@
+<div class="px-3" style="margin-bottom: 120px;">
+  <div class="theme-container">
+    <div fxLayout="column" fxLayoutAlign="center center" class="text-center" style="margin-top: 50px;">  
+      <h1 class="uppercase">Aproveite nossos artigos</h1>             
+      <p>e descubra mais ainda sobre o Rio de Janeiro.</p>
+    </div>
+    @if(loading){
+      <div fxLayout="column" fxLayoutAlign="center center" class="text-center" style="margin-top: 50px;">  
+        <mat-spinner></mat-spinner>
+      </div>
+    }
+    <div fxLayout="row wrap" class="agents-wrapper" style="margin-top: 30px;">
+      @for (artigo of artigos; track artigo.id) { 
+        <div fxFlex="100" fxFlex.gt-md="33.3" fxFlex.md="33.3" fxFlex.sm="50" class="p-3">
+          <mat-card>
+            <a href="#" class="agent-img">
+              <img mat-card-image src={{imagens}}{{artigo.foto_capa}} class="w-100 d-block"> 
+            </a> 
+            <mat-card-content class="p-3">
+              <h2 style="font-size: 16px;">{{artigo.titulo}}</h2>
+              <p class="mt-3" style="text-align: justify;">{{artigo.resumo}}</p>                                    
+              <p class="mt-3" style="font-size: 11px;">Escrito por: {{artigo.escrito_por}}</p>                                    
+            </mat-card-content>
+            <mat-divider></mat-divider>
+            <mat-card-actions fxLayoutAlign="center center">
+              <div>
+                <a [routerLink]="['/blog', artigo.url_artigo]" mat-button color="primary" class="uppercase">Ler artigo completo</a>
+              </div> 
+            </mat-card-actions>                              
+          </mat-card>
+        </div>
+      }
+    </div>
+  </div>
+</div>
+<app-get-in-touch></app-get-in-touch>

@@ -1,0 +1,260 @@
+<div class="p-3">
+    <div class="theme-container">  
+        <div fxLayout="row" fxLayoutAlign="center center" class="my-3">
+            <mat-card [style.max-width.px]="500" class="p-3">
+                <div fxLayout="column" fxLayoutAlign="center center" class="text-center">  
+                    <h1 class="uppercase">Cadastro</h1>  
+                    <a mat-button routerLink="/login" color="accent" class="w-100">Já possui conta? Entrar!</a>  
+                </div>
+                <form [formGroup]="registerForm" (ngSubmit)="Register()"> 
+                    <mat-form-field  appearance="outline" class="w-100 mt-3">
+                        <mat-icon matPrefix class="mr-1 text-muted">person</mat-icon>
+                        <mat-label>Nome Completo</mat-label>
+                        <input matInput placeholder="Nome Completo" formControlName="name" required maxlength="64">
+                        <mat-error>
+                            @if (registerForm.controls.name.errors?.required) {
+                                Campo obrigatório
+                            }
+                            @if (registerForm.controls.name.hasError('minlength')) {
+                                Mínimo 5 caracteres
+                            }
+                            @if (registerForm.controls.name.hasError('maxlength')) {
+                                Máximo 64 caracteres
+                            }
+                        </mat-error> 
+                    </mat-form-field>
+                    <mat-form-field  appearance="outline" class="w-100 mt-3">
+                        <mat-icon matPrefix class="mr-1 text-muted">email</mat-icon>
+                        <mat-label>E-mail</mat-label>
+                        <input matInput placeholder="E-mail" formControlName="email" required maxlength="64">
+                        <mat-error>
+                            @if (registerForm.controls.email.errors?.required) {
+                                Campo obrigatório
+                            }
+                            @if (registerForm.controls.email.hasError('minlength')) {
+                                Mínimo 5 caracteres
+                            }
+                            @if (registerForm.controls.email.hasError('maxlength')) {
+                                Máximo 64 caracteres
+                            }
+                            @if (registerForm.controls.email.hasError('email')) {
+                                Formato Inválido
+                            }
+                        </mat-error> 
+                    </mat-form-field>
+                    <mat-form-field  appearance="outline" class="w-100 mt-2">
+                        <mat-icon matPrefix class="mr-1 text-muted">group</mat-icon>
+                        <mat-label>Tipo de Pessoa</mat-label>
+                        <mat-select placeholder="Selecione o tipo de pessoa" formControlName="type">
+                            <mat-option value='individual'>Pessoa Física</mat-option>
+                            <mat-option value='company'>Pessoa Jurídica</mat-option>
+                        </mat-select>
+                        <mat-error>
+                            @if (registerForm.controls.type.errors?.required) {
+                                Campo obrigatório
+                            }
+                        </mat-error> 
+                    </mat-form-field>
+                    <mat-form-field  appearance="outline" class="w-100 mt-3">
+                        <mat-icon matPrefix class="mr-1 text-muted">assignment_ind</mat-icon>
+                        <mat-label>Documento</mat-label>
+                        <input matInput placeholder="Documento (somente números)" formControlName="document" required>
+                        <mat-error>
+                            @if (registerForm.controls.document.errors?.required) {
+                                Campo obrigatório
+                            }
+                            @if (registerForm.controls.document.hasError('minlength')) {
+                                Mínimo 11 caracteres
+                            }
+                            @if (registerForm.controls.document.hasError('maxlength')) {
+                                Máximo 14 caracteres
+                            }
+                        </mat-error> 
+                    </mat-form-field>
+                    <mat-form-field  appearance="outline" class="w-100 mt-3">
+                        <mat-icon matPrefix class="mr-1 text-muted">location_on</mat-icon>
+                        <mat-label>Endereço</mat-label>
+                        <input matInput placeholder="Endereço" formControlName="line1" required>
+                        <mat-error>
+                            @if (registerForm.controls.line1.errors?.required) {
+                                Campo obrigatório
+                            }
+                        </mat-error> 
+                    </mat-form-field>
+                    <mat-form-field  appearance="outline" class="w-100 mt-3">
+                        <mat-icon matPrefix class="mr-1 text-muted">location_on</mat-icon>
+                        <mat-label>Complemento</mat-label>
+                        <input matInput placeholder="Complemento" formControlName="line2">
+                    </mat-form-field>
+                    <mat-form-field  appearance="outline" class="w-100 mt-3">
+                        <mat-icon matPrefix class="mr-1 text-muted">location_on</mat-icon>
+                        <mat-label>CEP</mat-label>
+                        <input matInput placeholder="CEP" formControlName="zipcode" required>
+                        <mat-error>
+                            @if (registerForm.controls.zipcode.errors?.required) {
+                                Campo obrigatório
+                            }
+                        </mat-error> 
+                    </mat-form-field>
+                    <mat-form-field  appearance="outline" class="w-100 mt-3">
+                        <mat-icon matPrefix class="mr-1 text-muted">location_on</mat-icon>
+                        <mat-label>País</mat-label>
+                        <input matInput placeholder="País" formControlName="country" required>
+                        <mat-error>
+                            @if (registerForm.controls.country.errors?.required) {
+                                Campo obrigatório
+                            }
+                        </mat-error> 
+                    </mat-form-field>
+                    <mat-form-field  appearance="outline" class="w-100 mt-3">
+                        <mat-icon matPrefix class="mr-1 text-muted">location_on</mat-icon>
+                        <mat-label>Estado</mat-label>
+                        <input matInput placeholder="Estado" formControlName="state" required>
+                        <mat-error>
+                            @if (registerForm.controls.state.errors?.required) {
+                                Campo obrigatório
+                            }
+                        </mat-error> 
+                    </mat-form-field>
+                    <mat-form-field  appearance="outline" class="w-100 mt-3">
+                        <mat-icon matPrefix class="mr-1 text-muted">location_on</mat-icon>
+                        <mat-label>Cidade</mat-label>
+                        <input matInput placeholder="Cidade" formControlName="city" required>
+                        <mat-error>
+                            @if (registerForm.controls.city.errors?.required) {
+                                Campo obrigatório
+                            }
+                        </mat-error> 
+                    </mat-form-field>
+                    <mat-form-field  appearance="outline" class="w-100 mt-3">
+                        <mat-icon matPrefix class="mr-1 text-muted">lock</mat-icon>
+                        <mat-label>Senha</mat-label>
+                        <input matInput placeholder="Senha" formControlName="password" type="password" minlength="6" maxlength="12" required [type]="hide ? 'password' : 'text'">
+                        <mat-error>
+                            @if (registerForm.controls.password.errors?.required) {
+                                Senha é obrigatória
+                            }
+                            @if (registerForm.controls.password.hasError('minlength')) {
+                                Mínimo 6 caracteres
+                            }
+                            @if (registerForm.controls.password.hasError('maxlength')) {
+                                Máximo 12 caracteres
+                            }
+                        </mat-error> 
+                        <button mat-icon-button matSuffix (click)="hide = !hide" type="button" class="text-muted">
+                            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        </button>
+                    </mat-form-field> 
+                    <mat-form-field  appearance="outline" class="w-100 mt-3">
+                        <mat-icon matPrefix class="mr-1 text-muted">lock</mat-icon>
+                        <mat-label>Confirmação de Senha</mat-label>
+                        <input matInput placeholder="Confirmação de Senha" formControlName="confirmPassword" type="password" required [type]="hide ? 'password' : 'text'">
+                        <mat-error>
+                            @if (registerForm.controls.confirmPassword.errors?.required) {
+                                Confirmação é obrigatória
+                            }
+                            @if (registerForm.controls.confirmPassword.hasError('mismatchedPasswords')) {
+                                Senhas não conferem
+                            }
+                        </mat-error> 
+                        <button mat-icon-button matSuffix (click)="hide = !hide" type="button" class="text-muted">
+                            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        </button>
+                    </mat-form-field> 
+                    <div class="text-center mt-2"> 
+                        @if(!spinner){
+                            <button mat-raised-button color="accent" class="uppercase" type="submit">
+                                Criar
+                            </button>
+                        }@else{<mat-spinner></mat-spinner>}
+                    </div> 
+                </form>
+
+                
+
+                <!-- <form [formGroup]="registerForm" (ngSubmit)="onRegisterFormSubmit()"> 
+                    <mat-form-field  appearance="outline" class="w-100 mt-2">
+                        <mat-icon matPrefix class="mr-1 text-muted">group</mat-icon>
+                        <mat-label>User type</mat-label>
+                        <mat-select placeholder="Select User Type" formControlName="userType">
+                            @for (type of userTypes; track $index) {
+                                <mat-option [value]="type">{{type.name}}</mat-option>
+                            }                            
+                        </mat-select>
+                        @if (registerForm.controls.userType.errors?.required) {
+                            <mat-error>User type is required</mat-error>  
+                        }                                     
+                    </mat-form-field>
+                    <mat-form-field  appearance="outline" class="w-100 mt-2">
+                        <mat-icon matPrefix class="mr-1 text-muted">person</mat-icon>
+                        <mat-label>Username</mat-label>
+                        <input matInput placeholder="Username" formControlName="username" required>
+                        <mat-error>
+                            @if (registerForm.controls.username.errors?.required) {
+                                Username is required
+                            }
+                            @if (registerForm.controls.username.hasError('minlength')) {
+                                Username isn't long enough, minimum of 6 characters
+                            }
+                        </mat-error> 
+                    </mat-form-field>
+                    <mat-form-field  appearance="outline" class="w-100 mt-1">
+                        <mat-icon matPrefix class="mr-1 text-muted">email</mat-icon>
+                        <mat-label>Email</mat-label>
+                        <input matInput placeholder="Email" formControlName="email" required>
+                        <mat-error>
+                            @if (registerForm.controls.email.errors?.required) {
+                                Email is required
+                            }
+                            @if (registerForm.controls.email.hasError('invalidEmail')) {
+                                Invalid email address
+                            }
+                        </mat-error> 
+                    </mat-form-field>
+                    <mat-form-field  appearance="outline" class="w-100 mt-1">
+                        <mat-icon matPrefix class="mr-1 text-muted">lock</mat-icon>
+                        <mat-label>Password</mat-label>
+                        <input matInput placeholder="Password" formControlName="password" type="password" minlength="6" required [type]="hide ? 'password' : 'text'">
+                        <mat-error>
+                            @if (registerForm.controls.password.errors?.required) {
+                                Password is required
+                            }
+                            @if (registerForm.controls.password.hasError('minlength')) {
+                                Password isn't long enough, minimum of 6 characters
+                            }
+                        </mat-error> 
+                        <button mat-icon-button matSuffix (click)="hide = !hide" type="button" class="text-muted">
+                            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        </button>
+                    </mat-form-field> 
+                    <mat-form-field  appearance="outline" class="w-100 mt-1">
+                        <mat-icon matPrefix class="mr-1 text-muted">lock</mat-icon>
+                        <mat-label>Confirm Password</mat-label>
+                        <input matInput placeholder="Confirm Password" formControlName="confirmPassword" type="password" required [type]="hide ? 'password' : 'text'">
+                        <mat-error>
+                            @if (registerForm.controls.confirmPassword.errors?.required) {
+                                Confirm Password is required
+                            }
+                            @if (registerForm.controls.confirmPassword.hasError('mismatchedPasswords')) {
+                                Passwords do not match
+                            }
+                        </mat-error> 
+                        <button mat-icon-button matSuffix (click)="hide = !hide" type="button" class="text-muted">
+                            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        </button>
+                    </mat-form-field> 
+                    <mat-slide-toggle formControlName="receiveNewsletter" class="my-2">Receive Newsletter</mat-slide-toggle>
+                    <div class="text-center mt-2"> 
+                        <button mat-raised-button color="accent" class="uppercase" type="submit">
+                            Create an Account
+                        </button>
+                    </div> 
+                </form> -->
+                <div class="divider mt-4"></div> 
+                <mat-card-actions fxLayoutAlign="center center" class="text-center">
+                    <small class="my-3">Clicando em CRIAR você está de acordo com nossos <a mat-button routerLink="/terms-conditions" color="primary" class="mx-2">Termos e condições</a> </small>
+                </mat-card-actions>
+            </mat-card>
+        </div>  
+    </div>
+</div>

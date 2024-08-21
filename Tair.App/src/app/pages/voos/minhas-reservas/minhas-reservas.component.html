@@ -1,0 +1,103 @@
+<div class="p-3" style="margin-bottom: 150px;">
+    <div class="theme-container">  
+        <div class="my-3">
+            <div fxLayout="column" fxLayoutAlign="center center" class="text-center">  
+                <h1 class="uppercase">Minhas Reservas</h1>             
+                <p>Abaixo você terá acesso as suas reservas para que possa imprimir seu ticket ou realizar qualquer ação que desejar.</p>
+            </div>
+        </div>
+        <mat-form-field appearance="outline" class="w-100" style="margin-top: 30px;">
+            <input matInput (keyup)="applyFilter($event.target)" placeholder="Filtrar pela categoria" autocomplete="off">
+        </mat-form-field>
+        <div class="table-wrapper"> 
+            <table mat-table [dataSource]="dataSource" matSort class="w-100">
+            
+                <ng-container matColumnDef="data_voo">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> Data do Voo </th>
+                  <td mat-cell *matCellDef="let reservas"> {{reservas.data_voo | date: 'dd/MM/yyyy'}} </td>
+                </ng-container> 
+
+                <ng-container matColumnDef="categoria_voo">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> Categoria </th>
+                  <td mat-cell *matCellDef="let reservas"> {{reservas.categoria_voo}} </td>
+                </ng-container>  
+          
+                <ng-container matColumnDef="quantidade_pax">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> Passageiros </th>
+                  <td mat-cell *matCellDef="let reservas"> {{reservas.quantidade_pax}} </td>
+                </ng-container> 
+          
+                <ng-container matColumnDef="tempo_de_voo">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Tempo de voo </th>
+                    <td mat-cell *matCellDef="let reservas"> {{reservas.tempo_de_voo}} min </td>
+                  </ng-container> 
+          
+                <ng-container matColumnDef="valor_pago">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> Valor Pago </th>
+                  <td mat-cell *matCellDef="let reservas"> R$ {{reservas.valor_pago}} </td>
+                </ng-container> 
+
+                <ng-container matColumnDef="charge_status">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Status do Pagamento </th>
+                    <td mat-cell *matCellDef="let reservas"> {{reservas.charge_status | statusReserva}} </td>
+                </ng-container> 
+
+                <ng-container matColumnDef="forma_pagamento">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Forma de Pagamento </th>
+                    <td mat-cell *matCellDef="let reservas"> {{reservas.forma_pagamento}} </td>
+                </ng-container> 
+          
+                <!-- Actions Column -->
+                <ng-container matColumnDef="actions">
+                  <th mat-header-cell *matHeaderCellDef>  </th>
+                  <td mat-cell *matCellDef="let reservas">  
+                      <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+                        <mat-icon>more_vert</mat-icon>
+                      </button>
+                      <mat-menu #menu="matMenu">
+                          @if(reservas.pode_cancelar_ou_remarcar == true){
+                            <button mat-menu-item>
+                              <mat-icon>confirmation_number</mat-icon>
+                              <span>Imprimir ticket</span>
+                            </button>
+                            <!-- <button mat-menu-item>
+                              <mat-icon>calendar_month</mat-icon>
+                              <span>Remarcar data</span>
+                            </button> -->
+                            <button mat-menu-item (click)="cancelarVoo(reservas.id)">
+                                <mat-icon>cancel</mat-icon>
+                                <span>Cancelar voo</span>
+                              </button>
+                        }@else{
+                            <button mat-menu-item disabled>
+                                <mat-icon>confirmation_number</mat-icon>
+                                <span>Imprimir ticket</span>
+                              </button>
+                            <!-- <button mat-menu-item disabled>
+                                <mat-icon>calendar_month</mat-icon>
+                                <span>Remarcar data</span>
+                            </button> -->
+                            <button mat-menu-item disabled>
+                                <mat-icon>cancel</mat-icon>
+                                <span>Cancelar voo</span>
+                            </button>
+                        }
+
+                        
+                      </mat-menu>
+                  </td>
+
+                  
+                </ng-container> 
+            
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let reservas; columns: displayedColumns;"></tr>
+            </table> 
+            @if (!dataSource?.data.length ) {
+                <p class="py-5 mb-0 text-center">No data available</p> 
+            }   
+        </div>
+        <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" showFirstLastButtons></mat-paginator>
+    </div>
+</div>
+<app-get-in-touch></app-get-in-touch>

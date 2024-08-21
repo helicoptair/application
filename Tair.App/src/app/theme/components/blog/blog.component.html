@@ -1,0 +1,8 @@
+<a mat-button [matMenuTriggerFor]="currencyMenu" #currencyMenuTrigger="matMenuTrigger">
+    <span>BLOG</span><mat-icon class="mat-icon-sm caret" iconPositionEnd>arrow_drop_down</mat-icon>
+</a>
+<mat-menu #currencyMenu="matMenu" [overlapTrigger]="false" xPosition="before" class="app-menu-panel">
+    <button mat-menu-item>
+        <span [routerLink]="['blog']">Ler artigos</span>
+    </button>
+</mat-menu>

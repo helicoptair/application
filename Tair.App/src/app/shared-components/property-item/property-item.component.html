@@ -1,0 +1,132 @@
+<mat-card class="property-item p-0" [ngClass]="[viewType + '-item', 'column-'+column]" [class.full-width-page]="fullWidthPage" fxLayout="row wrap">  
+  
+    <div fxFlex="100" fxShrink="3" [fxFlex.gt-sm]="(viewType=='list') ? 40 : 100" [fxFlex.sm]="(viewType=='list') ? 50 : 100" class="thumbnail-section">
+
+        <!-- STATUS EM CIMA -->
+        <div fxLayout="row wrap" class="property-status">
+            @if(voo.status){
+                <span [style.background-color]="getStatusBgColor(voo.status)">{{voo.status}}</span>
+            }
+            <!-- @for (status of voo.status; track $index) {
+                <span [style.background-color]="getStatusBgColor(status)">{{status}}</span>
+            }  -->
+        </div>
+        
+        <!-- FOTO UNICA -->
+        <div class="mat-card-image w-100 m-0">
+            <!-- <img src="images/capas_voos/Panoramico_30min_1pax_md.png"> -->
+            <img src="{{ imagens }}{{ voo.imagem_media }}">
+        </div>
+
+        <!-- FOTO COM SLIDES -->
+        <!-- @if (property.gallery.length == 1) {
+            <div class="mat-card-image w-100 m-0">
+                <img [src]="property.gallery[0].medium">
+            </div>
+        }
+        @if (property.gallery.length > 1) {
+            <div class="mat-card-image w-100 m-0">
+                <div class="swiper-container" [swiper]="config">
+                    <div class="swiper-wrapper">
+                        @for (image of property.gallery; track $index) {
+                            <div class="swiper-slide">
+                                <img [attr.data-src]="image.medium" class="swiper-lazy">
+                                <div class="swiper-lazy-preloader"></div>
+                            </div> 
+                        }                       
+                    </div>  
+                    <div class="swiper-pagination white"></div>  
+                    <button mat-icon-button class="swiper-button-prev swipe-arrow"><mat-icon class="mat-icon-lg">keyboard_arrow_left</mat-icon></button>
+                    <button mat-icon-button class="swiper-button-next swipe-arrow"><mat-icon class="mat-icon-lg">keyboard_arrow_right</mat-icon></button>
+                </div>
+            </div>
+        }  -->
+
+        <!-- FAVORITO E COMPARACAO -->
+        <!-- <div class="control-icons">
+            <button mat-button [disabled]="onFavorites()" (click)="addToFavorites()" matTooltip="Add To Favorite">
+                <mat-icon class="mat-icon-sm">favorite_border</mat-icon>
+            </button>
+            <button mat-button [disabled]="onCompare()" (click)="addToCompare()" matTooltip="Add To Compare">
+                <mat-icon class="mat-icon-sm">compare_arrows</mat-icon>
+            </button>  
+        </div>  -->
+
+    </div>
+
+    <div fxFlex="100" [fxFlex.gt-sm]="(viewType=='list') ? 60 : 100" [fxFlex.sm]="(viewType=='list') ? 50 : 100" class="p-3" style="margin-top: 40px;">
+
+        <div fxLayout="column" fxLayoutAlign="start stretch" class="h-100">
+            <mat-card-content class="mb-0 p-0">
+              
+                <h1 class="title"><a [routerLink]="['/voos', voo.url_voo]">{{voo.titulo}}</a></h1>
+
+                <!-- LOCALIZACAO -->
+                <!-- <p fxLayout="row" class="address">
+                    <mat-icon class="text-muted">location_on</mat-icon>
+                    <span>{{property.formattedAddress}}</span>
+                </p> -->
+
+                <div fxLayout="row" fxLayoutAlign="space-between center">
+                    <div>
+                        @if (settings.currency == 'USD') {
+                            <h3 class="primary-color price">
+                                <span>a partir de {{voo.preco_pix_pessoa | currency : 'USD' : 'symbol' : '1.0'}}</span>
+                            </h3>
+                        }
+                        @if (settings.currency == 'EUR') {
+                            <h3 class="primary-color price">
+                                <span>a partir de {{voo.preco_pix_pessoa | currency : 'EUR' : 'symbol' : '1.0'}}</span>
+                            </h3>
+                        } 
+                        @if (settings.currency == 'BRL') {
+                            <h3 class="primary-color">
+                                <span>a partir de {{voo.preco_pix_pessoa | currency : 'BRL' : 'symbol' : '1.0'}} <span style="font-size: 10px;">*por pessoa</span></span>
+                            </h3>
+                        } 
+                    </div>
+                    <!-- <app-rating [ratingsCount]="property.ratingsCount" [ratingsValue]="property.ratingsValue"></app-rating> -->
+                </div>
+
+                @if (viewType=='list' && fullWidthPage) {
+                    <div fxShow="false" fxShow.gt-sm class="mt-3"> 
+                        <!-- <p>{{voo.desc}}</p> -->
+                    </div>
+                }             
+
+                <div class="features mt-3">                    
+                    <p><span>Tempo de voo</span><span>{{voo.tempo_de_voo_minutos}} min</span></p>
+                    <p><span>Qntd de pessoas</span><span>{{voo.quantidade_pax}}</span></p>
+                    @if(voo.status == "Exclusivo" || voo.status == "Promo" || voo.status == "Foto ou Vídeo" || voo.status == "Foto e Vídeo"){
+                        <p><span>Exclusividade</span><span>Sim</span></p>
+                    }@else{
+                        <p><span>Exclusividade</span><span>Não</span></p>
+                    }
+                    @if(voo.status == "Foto ou Vídeo"){
+                        <p><span>Com foto ou vídeo</span><span>Sim</span></p>
+                    }@else{
+                        <p><span>Com foto ou vídeo</span><span>Não</span></p>
+                    }
+                    @if(voo.status == "Foto e Vídeo"){
+                        <p><span>Com foto + vídeo</span><span>Sim</span></p>
+                    }@else{
+                        <p><span>Com foto + vídeo</span><span>Não</span></p>
+                    }
+                </div> 
+
+            </mat-card-content>
+            <div class="sticky-footer-helper" fxFlex="grow"></div>
+            <mat-card-actions class="m-0 p-0" fxLayoutAlign="center"> 
+                <!-- <p fxLayout="row" class="date mb-0">
+                    <mat-icon class="text-muted">date_range</mat-icon>
+                    span class="mx-2">{{property.published | date:"dd MMMM, yyyy" }}</span>
+                </p> -->
+                <div>
+                    <a [routerLink]="['/voos', voo.url_voo]" mat-stroked-button color="primary" class="uppercase">Ver mais</a>
+                </div> 
+            </mat-card-actions> 
+        </div>        
+        
+    </div> 
+
+</mat-card>

@@ -1,0 +1,53 @@
+{   
+  "LOGIN": "Entrar", 
+  "LOGOUT": "Sair", 
+  "REGISTER": "Cadastrar",
+  "ACCOUNT": "Conta",
+  "SUBMIT_PROPERTY": "Submit property",
+  "MENU": "Menu",
+  "MY_PROPERTIES": "Minhas Propriedades",
+  "FAVORITES": "Favoritos",
+  "COMPARE": "Comparar",
+  "EDIT_PROFILE": "Editar Perfil",
+  "LOCK_SCREEN": "Lock screen",
+  "HELP": "Ajuda",
+  "NAV": {  
+    "HOME": "Home", 
+    "PROPERTIES": "Propriedades", 
+    "PAGES": "Páginas", 
+    "AGENTS": "Agentes",
+    "AGENT": "Agente", 
+    "FAQS": "Faqs",
+    "PRICING": "Preços",
+    "TERMS_CONDITIONS": "Termos & Condições",
+    "LANDING": "Landing", 
+    "404_PAGE": "404 Page",
+    "OTHERS": "Outros",
+    "EXTERNAL_LINK": "Link Externo",
+    "MENU_ITEM": "Menu Item",
+    "CONTACT": "Contato",
+    "ABOUT_US": "Sobre Nós",
+    "ADMIN": "Admin"
+  }, 
+  "BTN": {
+    "ADD": "Add",
+    "SAVE": "Salvar",
+    "SUBMIT": "Enviar",
+    "CANCEL": "Cancelar",
+    "UPLOAD": "Upload",
+    "REMOVE": "Remover",
+    "YES": "Sim",
+    "NO": "N'ao",
+    "OK": "OK",
+    "CLEAR": "Limpar",
+    "ADVANCED": "Avançado",
+    "HIDE": "Esconder"
+  },
+  "MESSAGE": {
+    "SURE_DELETE": "Tem certeza que gostaria de deletar?",
+    "FILE_SIZE": "Arquivo não pode exceder {{param}} kb."
+  },
+  "FIELD": { 
+    "NAME": "Nome" 
+  }
+}
