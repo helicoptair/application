@@ -9,7 +9,7 @@
 export const environment = {
   production: false,
   url: '',
-  apiUrlV1: 'https://tair.azurewebsites.net/api/v1/',
-  imagensUrl: 'https://tair.azurewebsites.net/images/',
-  filesUrl: 'https://tair.azurewebsites.net/files/'
+  apiUrlV1: 'https://helicoptair-gffqchbbfmabhga8.brazilsouth-01.azurewebsites.net/api/v1/',
+  imagensUrl: 'https://helicoptair-gffqchbbfmabhga8.brazilsouth-01.azurewebsites.net/images/',
+  filesUrl: 'https://helicoptair-gffqchbbfmabhga8.brazilsouth-01.azurewebsites.net/files/'
 };

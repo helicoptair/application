@@ -35,6 +35,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {provideNativeDateAdapter} from '@angular/material/core';
 import { CreateSession } from '@models/create_session';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import moment from 'moment';
 
 @Component({
   selector: 'app-voo',
@@ -101,9 +102,10 @@ export class VooComponent implements OnInit {
   }
   lat: number = 0;
   lng: number = 0;
-  private start = new Date(Date.now());
-  readonly minDate = new Date(this.start.getFullYear(), 8, 20);
-  readonly maxDate = new Date();
+  public minDateBase = moment.utc().add(1, 'd').format('MM-DD-YYYY, h:mm:ss');
+  public maxDateBase = moment.utc().add(4, 'months').format('MM-DD-YYYY, h:mm:ss');
+  public minDate = new Date(this.minDateBase);
+  public maxDate = new Date(this.maxDateBase);
 
   constructor(public settingsService: SettingsService,
               public voosService: VoosService,
@@ -118,9 +120,9 @@ export class VooComponent implements OnInit {
   }
 
   ngOnInit() {
+    console.log("MOMENT MIN: " + this.minDate);
+    console.log("MOMENT MAX: " + this.maxDate);
     this.sub = this.activatedRoute.params.subscribe(params => {
-      // this.getPropertyById(params['id']);
-      // this.getVooById(params['id']);
       this.getVooByUrl(params['url_voo']);
     });
     this.getRelatedProperties();
