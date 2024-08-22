@@ -12,6 +12,9 @@
     <div fxLayout="row" fxLayoutAlign="end center" class="">
       <app-blog></app-blog>
       <app-currency></app-currency>
+      @if (!userLogado){
+        <app-acesso></app-acesso>
+      }
       <app-lang></app-lang>
       @if (userLogado){
         <app-user-menu></app-user-menu>
@@ -36,7 +39,17 @@
       <a routerLink="/" mat-icon-button matTooltip="Home" fxShow="false" fxShow.gt-md class="mr-3 ml-2">
           <mat-icon matBadgeSize="small" matBadgeColor="warn"aria-hidden="false">home</mat-icon>
       </a>      
-      <a routerLink="/submit-property" mat-mini-fab color="primary" fxHide="false" fxHide.gt-xs class=""><mat-icon>add</mat-icon></a>
+      <!-- <a routerLink="/" mat-mini-fab color="primary" fxHide="false" fxHide.gt-xs class=""><mat-icon>home</mat-icon></a> -->
+      <!-- <div fxHide="false" fxHide.gt-xs style="margin-right: 20px;">
+        <button mat-raised-button color="warn" class="uppercase mx-1">Entrar</button>
+        <button mat-raised-button color="warn" class="uppercase mx-1">Cadastrar</button>
+      </div> -->
+<!-- 
+      <div fxLayout="row" fxLayoutAlign="end center" fxHide="false" fxHide.gt-xs>
+        <button mat-raised-button color="primary" class="uppercase mx-1">Login</button>
+        <button mat-raised-button color="success" class="uppercase mx-1">Register</button>
+      </div>   -->
+      
      
       @if(!userLogado){
         <a routerLink="/login" mat-raised-button color="primary" fxShow="false" fxShow.gt-xs class="uppercase">{{ 'LOGIN' | translate }}</a>

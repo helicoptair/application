@@ -1,0 +1,11 @@
+<a mat-button [matMenuTriggerFor]="currencyMenu" #currencyMenuTrigger="matMenuTrigger">
+    <span>ACESSO</span><mat-icon class="mat-icon-sm caret" iconPositionEnd>arrow_drop_down</mat-icon>
+</a>
+<mat-menu #currencyMenu="matMenu" [overlapTrigger]="false" xPosition="before" class="app-menu-panel">
+    <button mat-menu-item>
+        <span [routerLink]="['login']">Login</span>
+    </button>
+    <button mat-menu-item>
+        <span [routerLink]="['register']">Register</span>
+    </button>
+</mat-menu>

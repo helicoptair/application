@@ -18,6 +18,7 @@ import { LocalStorageUtils } from '../../../utils/localStorage';
 import { AuthService } from '@services/auth.service';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { BlogComponent } from '../blog/blog.component';
+import { AcessoComponent } from '../acesso/acesso.component';
 
 @Component({
   selector: 'app-toolbar1',
@@ -38,6 +39,7 @@ import { BlogComponent } from '../blog/blog.component';
     LangComponent,
     UserMenuComponent,
     LogoComponent,
+    AcessoComponent,
     HorizontalMenuComponent
   ],
   templateUrl: './toolbar1.component.html'
@@ -48,7 +50,7 @@ export class Toolbar1Component implements OnInit {
 
   LocalStorage = new LocalStorageUtils();
   token!: string;
-  userLogado: boolean = false;
+  userLogado: boolean = true;
 
   ngOnInit() { 
     this.usuarioLogado();
