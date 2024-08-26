@@ -300,7 +300,7 @@ export class VooComponent implements OnInit {
 
   public abrirCheckout(): void {
     let obj = new CreateSession();
-    obj.VooIdToReturn = this.activatedRoute.snapshot.params["id"];
+    obj.VooIdToReturn = this.activatedRoute.snapshot.params["url_voo"];
     obj.DataEscolhida = this.dataEscolhida;
     
     // teste

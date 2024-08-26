@@ -28,6 +28,7 @@ namespace Tair.Api.V1.Controllers
         private readonly IMapper _mapper;
         private readonly IReservasService _reservasService;
         private readonly IReservasRepository _reservasRepository;
+        private readonly IVoosRepository _voosRepository;
         #endregion
 
         #region CONSTRUCTOR
@@ -35,6 +36,7 @@ namespace Tair.Api.V1.Controllers
                                 UserManager<ApplicationUser> userManager,
                                 IReservasService reservasService,
                                 IReservasRepository reservasRepository,
+                                IVoosRepository voosRepository,
                                 IMapper mapper,
                                 INotificador notificador, IUser user) : base(notificador, user, configuration)
         {
@@ -42,6 +44,7 @@ namespace Tair.Api.V1.Controllers
             _userManager = userManager;
             _reservasService = reservasService;
             _reservasRepository = reservasRepository;
+            _voosRepository = voosRepository;
             _user = user;
         }
         #endregion
@@ -210,7 +213,7 @@ namespace Tair.Api.V1.Controllers
             }
 
             var user = await _userManager.FindByIdAsync(_user.GetUserId().ToString());
-            var domain = "http://localhost:4200/";
+            var domain = "https://www.helicoptair.com.br/";
             var identificador = Guid.NewGuid(); //Usado pra identificar quando chegar o webhook de charge
 
             var options = new SessionCreateOptions
@@ -231,6 +234,7 @@ namespace Tair.Api.V1.Controllers
             };
 
             var service = new SessionService();
+            var voo = await _voosRepository.ObterVooPelaUrl(session.VooIdToReturn);
 
             try
             {
@@ -245,7 +249,7 @@ namespace Tair.Api.V1.Controllers
                     ChargeStatus = "Session Initiate - Unpaid",
                     Identificador = identificador.ToString(),
                     TransactionId = "",
-                    VooId = new Guid(session.VooIdToReturn),
+                    VooId = voo.Id,
                     UsuarioId = new Guid(user.Id)
                 };
 
@@ -384,6 +388,7 @@ namespace Tair.Api.V1.Controllers
                         return CustomResponse();
                     }
                 }
+                // Charge reembolsada
                 else if (stripeEvent.Type == Events.ChargeRefunded)
                 {
                     // Pegar a reserva pelo identificador

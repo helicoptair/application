@@ -96,7 +96,7 @@ export class MinhasReservasComponent implements OnInit {
               setTimeout(() => {
                 this.obterReservas();
                 // window.location.reload();
-              }, 500);
+              }, 1500);
             },
             error => {
               this.snackBar.open(error.error.errors[0], 'x', { panelClass: 'success', verticalPosition: 'top', duration: 2000 });

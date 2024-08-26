@@ -36,10 +36,10 @@ import { AcessoComponent } from '../acesso/acesso.component';
     MatSnackBarModule,
     CurrencyComponent,
     BlogComponent,
+    AcessoComponent,
     LangComponent,
     UserMenuComponent,
     LogoComponent,
-    AcessoComponent,
     HorizontalMenuComponent
   ],
   templateUrl: './toolbar1.component.html'

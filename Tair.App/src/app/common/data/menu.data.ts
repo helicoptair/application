@@ -23,8 +23,8 @@ export const horizontalMenuItems = [
 ]
 
 export const verticalMenuItems = [
-    new Menu(1, 'Home', '/', null, null, false, 0),
-    new Menu(2, 'Artigos', '/blog', null, null, false, 0),
+    //new Menu(1, 'Home', '/', null, null, false, 0),
+    //new Menu(2, 'Artigos', '/blog', null, null, false, 0),
     // new Menu(1, 'NAV.HOME', '/', null, null, false, 0),
     // new Menu(2, 'NAV.PROPERTIES', '/properties', null, null, false, 0),
     // new Menu(3, 'NAV.PAGES', '/properties', null, null, false, 0),

@@ -8,7 +8,6 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { RouterModule } from '@angular/router';
 import { BidiModule } from '@angular/cdk/bidi';
 import { Settings, SettingsService } from '@services/settings.service';
-import { LocalStorageUtils } from '../../../utils/localStorage';
 
 @Component({
   selector: 'app-acesso',
