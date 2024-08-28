@@ -8,6 +8,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { SocialIconsComponent } from '../social-icons/social-icons.component';
 import { MatButtonModule } from '@angular/material/button';
 import { FlexLayoutModule } from '@ngbracket/ngx-layout';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
     selector: 'app-footer',
@@ -20,6 +21,7 @@ import { FlexLayoutModule } from '@ngbracket/ngx-layout';
         LogoComponent,
         SocialIconsComponent,
         GoogleMapsModule,
+        TranslateModule,
         FlexLayoutModule
     ],
     templateUrl: './footer.component.html'

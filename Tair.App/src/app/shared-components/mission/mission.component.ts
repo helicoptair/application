@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { FlexLayoutModule } from '@ngbracket/ngx-layout';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-mission',
@@ -9,6 +10,7 @@ import { FlexLayoutModule } from '@ngbracket/ngx-layout';
   imports: [
     FlexLayoutModule,
     MatCardModule,
+    TranslateModule,
     MatIconModule
   ],
   templateUrl: './mission.component.html'

@@ -7,7 +7,8 @@
 }
 <span fxLayoutAlign="center center" class="item">
   <mat-icon [color]="iconColor" [ngClass]="'mat-icon-' + iconSize">location_on</mat-icon>
-  <span class="px-1">Aeroporto de Jacarepaguá - RJ</span>
+  <span class="px-1">{{ 'LOCAL' | translate }}</span>
+  <!-- <span class="px-1">Aeroporto de Jacarepaguá - RJ</span> -->
 </span>
 @if (dividers) {
   <span class="v-divider"></span>

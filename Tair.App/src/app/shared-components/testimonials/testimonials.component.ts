@@ -2,12 +2,16 @@ import { Component, OnInit } from '@angular/core';
 import { SwiperConfigInterface, SwiperModule, SwiperPaginationInterface } from '../../theme/components/swiper/swiper.module';
 import { Testimonial } from '../../common/interfaces/testimonial';
 import { AppService } from '@services/app.service';
+import { MatButtonModule } from '@angular/material/button';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-testimonials',
   standalone: true,
   imports: [
-    SwiperModule
+    SwiperModule,
+    TranslateModule,
+    MatButtonModule
   ],
   templateUrl: './testimonials.component.html',
   styleUrls: ['./testimonials.component.scss']

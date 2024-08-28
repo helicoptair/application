@@ -2,6 +2,7 @@ import { NgClass } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { FlexLayoutModule } from '@ngbracket/ngx-layout';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contacts',
@@ -9,6 +10,7 @@ import { FlexLayoutModule } from '@ngbracket/ngx-layout';
   imports: [
     NgClass,
     FlexLayoutModule,
+    TranslateModule,
     MatIconModule
   ],
   templateUrl: './contacts.component.html'

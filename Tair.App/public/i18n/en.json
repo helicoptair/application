@@ -1,4 +1,5 @@
 {   
+  "LOCAL": "Jacarepaguá Airport - RJ", 
   "LOGIN": "Login", 
   "LOGOUT": "Logout", 
   "REGISTER": "Register",
@@ -11,6 +12,18 @@
   "EDIT_PROFILE": "Edit Profile",
   "LOCK_SCREEN": "Lock screen",
   "HELP": "Help",
+  "QUANTIDADE": "Passenger's quantity",
+  "DURACAO": "Flight duration",
+  "CATEGORIA_VOO": "Flight category",
+  "TIPO_VOO": "Flight type",
+  "PRECO": "Price",
+  "PRECO_DE": "From",
+  "PRECO_ATE": "To",
+  "PARCEIROS_HELICOPTAIR": "Helicoptair Partners",
+  "PARCEIROS_HELICOPTAIR_TEXTO": "Together we provide a quality service with complete safety and compliance.",
+  "ENCONTRADOS": "found",
+  "TESTEMONIAL": "What passengers think about Helicoptair",
+  "TESTEMONIAL_BTN": "Write a review",
   "NAV": {  
     "HOME": "Home", 
     "PROPERTIES": "Properties", 
@@ -49,5 +62,38 @@
   },
   "FIELD": { 
     "NAME": "Name" 
+  },
+  "PLACEHOLDER": {
+    "QUANTIDADE": "Select quantity",
+    "DURACAO": "Select duration",
+    "CATEGORIA_VOO": "Select category",
+    "TIPO_VOO": "Select type"
+  },
+  "OFERECEMOS": {
+    "TITULO": "What we offer",
+    "VOOS_PANORAMICOS": "Panoramic Flights",
+    "VOOS_TRANSLADOS": "Transfer Flights",
+    "SERVICOS_FOTOGRAFICOS": "Photographic Services",
+    "TRANSFER_TERRESTRE": "Transport",
+    "VOOS_PANORAMICOS_TEXTO": "We offer the most incredible panoramic flights over Rio de Janeiro, flying over the main tourist attractions.",
+    "VOOS_TRANSLADOS_TEXTO": "We offer executive flights to different locations, with total comfort and convenience, in addition to exceptional quality.",
+    "SERVICOS_FOTOGRAFICOS_TEXTO": "We have a partnership with professionals in the field to promote takes of the flight so that you can enjoy and not worry about taking photos.",
+    "TRANSFER_TERRESTRE_TEXTO": "We have partnerships with ground transportation companies to carry out all transport procedures between the hotel and the take-off location."
+  },
+  "DIFERENCIAIS": {
+    "TITULO": "Our Differences",
+    "PRECO_JUSTO": "Fair Price",
+    "INOVACAO": "Inovation",
+    "EQUIPE_QUALIFICADA": "Qualified Team",
+    "AGENDAMENTO_ONLINE": "Online Scheduling",
+    "PRECO_JUSTO_TEXTO": "Helicoptair cares about the customer and always seeks the best value for money so that everyone can enjoy this experience.",
+    "INOVACAO_TEXTO": "We care about the most advanced technologies and innovations to make this experience more pleasant for all our customers.",
+    "EQUIPE_QUALIFICADA_TEXTO": "The entire team is highly trained and has all the necessary certifications to provide your trip without risk and with total dedication.",
+    "AGENDAMENTO_ONLINE_TEXTO": "Make your reservation online and our team will contact you to confirm the information so that you can make your flight without any worries."
+  },
+  "FOOTER": {
+    "TEXTO": "Come fulfill your dream of flying over Rio de Janeiro on an epic helicopter ride.",
+    "LOCALIZACAO": "Jacarepaguá Airport - Barra da Tijuca",
+    "HORARIO": "Departures: Everyday from 9:00 - 17:00"
   }
 }

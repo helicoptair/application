@@ -2,15 +2,23 @@
     .swiper-container {
         padding-bottom: 50px;
 
+        .p{
+            img {
+                border-radius: 50%;
+                width: 150px;
+                height: 100px;
+            }
+        }
+
         .content {
             max-width: 650px;
             margin: 0 auto;
 
-            img {
-                border-radius: 50%;
-                width: 140px;
-                height: 140px;
-            }
+            // img {
+            //     border-radius: 50%;
+            //     width: 40px;
+            //     height: 40px;
+            // }
 
             .quote {
                 font-size: 50px;
@@ -33,5 +41,13 @@
                 text-transform: uppercase;
             }
         }
+    }
+}
+
+.testimonials-carousel-2 {
+    img {
+        border-radius: 50%;
+        width: 150px;
+        height: 100px;
     }
 }

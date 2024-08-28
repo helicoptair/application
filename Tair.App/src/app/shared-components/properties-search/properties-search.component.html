@@ -4,8 +4,8 @@
 
         <div fxFlex="100" fxFlex.gt-sm="33.3" fxFlex.sm="50" class="p-2">
             <mat-form-field [appearance]="getAppearance()" [floatLabel]="getFloatLabel()">
-                <mat-label>Quantidade de passageiros</mat-label> 
-                <mat-select placeholder="Selecione a quantidade" formControlName="quantidade_pax">
+                <mat-label>{{ 'QUANTIDADE' | translate }}</mat-label> 
+                <mat-select placeholder="{{ 'PLACEHOLDER.QUANTIDADE' | translate }}" formControlName="quantidade_pax">
                     <!-- @for (propertyType of propertyTypes; track $index) {
                         <mat-option [value]="propertyType">{{propertyType.name}}</mat-option>
                     } -->
@@ -20,8 +20,8 @@
 
         <div fxFlex="100" fxFlex.gt-sm="33.3" fxFlex.sm="50" class="p-2">
             <mat-form-field [appearance]="getAppearance()" [floatLabel]="getFloatLabel()">
-                <mat-label>Duração do passeio</mat-label>
-                <mat-select placeholder="Selecione a duração" formControlName="tempo_de_voo_minutos">
+                <mat-label>{{ 'DURACAO' | translate }}</mat-label>
+                <mat-select placeholder="{{ 'PLACEHOLDER.DURACAO' | translate }}" formControlName="tempo_de_voo_minutos">
                     <mat-option value='10'>10 min</mat-option>
                     <mat-option value='20'>20 min</mat-option>
                     <mat-option value='30'>30 min</mat-option>
@@ -33,8 +33,8 @@
         
         <div fxFlex="100" fxFlex.gt-sm="33.3" fxFlex.sm="50" class="p-2">
             <mat-form-field [appearance]="getAppearance()" [floatLabel]="getFloatLabel()">
-                <mat-label>Categoria do voo</mat-label>
-                <mat-select placeholder="Selecione a categoria" formControlName="categoria_de_voo">
+                <mat-label>{{ 'CATEGORIA_VOO' | translate }}</mat-label>
+                <mat-select placeholder="{{ 'PLACEHOLDER.CATEGORIA_VOO' | translate }}" formControlName="categoria_de_voo">
                     <mat-option value='1'>Panorâmico</mat-option>
                     <mat-option value='2'>Translado</mat-option>
                     <mat-option value='3'>Doors-off</mat-option>
@@ -44,8 +44,8 @@
 
         <div fxFlex="100" fxFlex.gt-sm="66.6" fxFlex.sm="50" class="p-2">
             <mat-form-field [appearance]="getAppearance()" [floatLabel]="getFloatLabel()">
-                <mat-label>Tipo de voo</mat-label>
-                <mat-select placeholder="Selecione o tipo" formControlName="tipo_de_voo">
+                <mat-label>{{ 'TIPO_VOO' | translate }}</mat-label>
+                <mat-select placeholder="{{ 'PLACEHOLDER.TIPO_VOO' | translate }}" formControlName="tipo_de_voo">
                     <mat-option value='1'>Compartilhado</mat-option>
                     <mat-option value='2'>Exclusivo</mat-option>
                     <mat-option value='3'>Com foto ou vídeo</mat-option>
@@ -69,8 +69,14 @@
             <div fxLayout="row wrap" fxLayoutAlign="space-between center">
                 <div fxFlex="45">
                     <mat-form-field [appearance]="getAppearance()" [floatLabel]="getFloatLabel()">
-                        <mat-label>{{(variant == 1) ? 'Preço R$' : 'A partir de'}}</mat-label>
-                        <input matInput autocomplete="off" placeholder="De" formControlName="from" type="text" onlyNumber>                  
+                        <!-- <mat-label>{{(variant == 1) ? 'Preço R$' : 'A partir de'}}</mat-label> -->
+                        @if(variant == 1){
+                            <mat-label>{{ 'PRECO' | translate }} R$</mat-label>
+                        }
+                        @else{
+                            <mat-label>A partir de</mat-label>
+                        }
+                        <input matInput autocomplete="off" placeholder="{{ 'PRECO_DE' | translate }}" formControlName="from" type="text" onlyNumber>                  
                     </mat-form-field>
                 </div>
                 <div fxFlex="10" class="text-center" [class.pb-3]="variant !== 3">
@@ -79,7 +85,7 @@
                 <div fxFlex="45">
                     <mat-form-field [appearance]="getAppearance()" [floatLabel]="getFloatLabel()">
                         <mat-label>{{(variant == 1) ? '' : 'Até'}}</mat-label>
-                        <input matInput autocomplete="off" placeholder="Até" formControlName="to" type="text" onlyNumber>                  
+                        <input matInput autocomplete="off" placeholder="{{ 'PRECO_ATE' | translate }}" formControlName="to" type="text" onlyNumber>                  
                     </mat-form-field>
                 </div>
             </div> 

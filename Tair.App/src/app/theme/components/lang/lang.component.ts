@@ -43,12 +43,15 @@ export class LangComponent implements OnInit {
     else if (lang == 'fr') {
       return 'French';
     }
-    else if (lang == 'ru') {
-      return 'Russian';
+    else if (lang == 'sp') {
+      return 'Spanish';
     }
-    else if (lang == 'tr') {
-      return 'Turkish';
-    }
+    // else if (lang == 'ru') {
+    //   return 'Russian';
+    // }
+    // else if (lang == 'tr') {
+    //   return 'Turkish';
+    // }
     else if (lang == 'pt') {
       return 'Portuguese';
     }

@@ -27,7 +27,7 @@ export class AppComponent {
               public translate: TranslateService,
               private domHandlerService: DomHandlerService) {
     this.settings = this.settingsService.settings;
-    translate.addLangs(['en', 'de', 'fr', 'ru', 'tr', 'pt']);
+    translate.addLangs(['en', 'de', 'fr', 'pt', 'sp']);
     translate.setDefaultLang('en');
     translate.use('en');
   }

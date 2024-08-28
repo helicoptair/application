@@ -1,12 +1,12 @@
 <div class="section testimonials">
     <div class="px-3">
         <div class="theme-container">
-            <h1 class="section-title">What people are saying</h1>
+            <h1 class="section-title">{{ 'TESTEMONIAL' | translate }}</h1>
             <div class="testimonials-carousel"> 
-                <div>
+                <!-- <div>
                     <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
                     <div class="elfsight-app-1f9ad0a4-889d-4da4-a41c-d22575efdc42" data-elfsight-app-lazy></div>
-                </div>
+                </div> -->
                 <div class="swiper-container h-100" [swiper]="config"> 
                     <div class="swiper-wrapper h-100">
                         @for (testimonial of testimonials; track $index) {
@@ -17,13 +17,16 @@
                                     <p class="text">{{testimonial.text}}</p>
                                     <div class="quote close text-right primary-color">”</div> 
                                     <h3 class="author">{{testimonial.author}}</h3>
-                                    <p>{{testimonial.position}}</p> 
+                                    <img [attr.data-src]="testimonial.position" class="swiper-lazy" width="30%">
                                     <div class="swiper-lazy-preloader"></div>
                                 </div>
                             </div>
                         }
                     </div> 
                     <div class="swiper-pagination"></div> 
+                </div>
+                <div style="text-align: center; margin-top: 20px;">
+                    <a href="https://g.page/r/CTZFSflbzK_AEBM/review" target="_blank" mat-raised-button color="primary" fxShow="false" fxShow.gt-xs class="uppercase">{{ 'TESTEMONIAL_BTN' | translate }}</a>
                 </div>
             </div>
         </div>

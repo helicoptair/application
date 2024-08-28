@@ -574,28 +574,22 @@ export class AppService {
   public getTestimonials(): Testimonial[] {
     return [
       {
-        text: 'Donec molestie turpis ut mollis efficitur. Nam fringilla libero vel dictum vulputate. In malesuada, ligula non ornare consequat, augue nibh luctus nisl, et lobortis justo ipsum nec velit. Praesent lacinia quam ut nulla gravida, at viverra libero euismod. Sed tincidunt tempus augue vitae malesuada. Vestibulum eu lectus nisi. Aliquam erat volutpat.',
-        author: 'Mr. Adam Sandler',
-        position: 'General Director',
-        image: 'images/profile/adam.jpg'
+        text: 'We did a transfer from Rio to Buzios, and it went really well. Thank you for the flexibility, and great service!',
+        author: 'Jan Sapper',
+        position: 'images/others/5star.png',
+        image: 'https://lh3.googleusercontent.com/a-/ALV-UjUq6xuq1eTrd13qY8ER6qLC8i-2_MMXZCxATjMyT-ralnM6fi-v=s36-c-rp-mo-br100'
       },
       {
-        text: 'Donec molestie turpis ut mollis efficitur. Nam fringilla libero vel dictum vulputate. In malesuada, ligula non ornare consequat, augue nibh luctus nisl, et lobortis justo ipsum nec velit. Praesent lacinia quam ut nulla gravida, at viverra libero euismod. Sed tincidunt tempus augue vitae malesuada. Vestibulum eu lectus nisi. Aliquam erat volutpat.',
-        author: 'Ashley Ahlberg',
-        position: 'Housewife',
-        image: 'images/profile/ashley.jpg'
+        text: 'Probably the most exciting thing I have ever experienced! I recommend 100% Its wonderful! Thank you for that!',
+        author: 'Brigitte Häbig',
+        position: 'images/others/5star.png',
+        image: 'https://lh3.googleusercontent.com/a/ACg8ocKtU1Vf9rKQmFCSdtb9KG4i9f9_tgyr6e3dhFZVDpthb2JX6g=s36-c-rp-mo-br100'
       },
       {
-        text: 'Donec molestie turpis ut mollis efficitur. Nam fringilla libero vel dictum vulputate. In malesuada, ligula non ornare consequat, augue nibh luctus nisl, et lobortis justo ipsum nec velit. Praesent lacinia quam ut nulla gravida, at viverra libero euismod. Sed tincidunt tempus augue vitae malesuada. Vestibulum eu lectus nisi. Aliquam erat volutpat.',
-        author: 'Bruno Vespa',
-        position: 'Blogger',
-        image: 'images/profile/bruno.jpg'
-      },
-      {
-        text: 'Donec molestie turpis ut mollis efficitur. Nam fringilla libero vel dictum vulputate. In malesuada, ligula non ornare consequat, augue nibh luctus nisl, et lobortis justo ipsum nec velit. Praesent lacinia quam ut nulla gravida, at viverra libero euismod. Sed tincidunt tempus augue vitae malesuada. Vestibulum eu lectus nisi. Aliquam erat volutpat.',
-        author: 'Mrs. Julia Aniston',
-        position: 'Marketing Manager',
-        image: 'images/profile/julia.jpg'
+        text: 'Um voo seguro é maravilhoso. Uma das melhores experiências da minha vida! Vale a pena!!!',
+        author: 'Roger Santos',
+        position: 'images/others/5star.png',
+        image: 'https://lh3.googleusercontent.com/a-/ALV-UjXMXD4pRKbgRXVyFQ8ZtVxCN1wGvZTV3w9w-rppnizyl5CJJI2XEw=s36-c-rp-mo-br100'
       }
     ];
   }

@@ -2,12 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { SwiperConfigInterface, SwiperModule } from '../../theme/components/swiper/swiper.module';
 import { AppService } from '@services/app.service';
 import { Client } from '../../common/interfaces/client';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-clients',
   standalone: true,
   imports: [
-    SwiperModule
+    SwiperModule,
+    TranslateModule
   ],
   templateUrl: './clients.component.html',
   styleUrls: ['./clients.component.scss']

@@ -54,7 +54,7 @@
 
     </div>
 
-    <div fxFlex="100" [fxFlex.gt-sm]="(viewType=='list') ? 60 : 100" [fxFlex.sm]="(viewType=='list') ? 50 : 100" class="p-3" style="margin-top: 40px;">
+    <div fxFlex="100" [fxFlex.gt-sm]="(viewType=='list') ? 60 : 100" [fxFlex.sm]="(viewType=='list') ? 50 : 100" class="p-3" style="margin-top: 50px;">
 
         <div fxLayout="column" fxLayoutAlign="start stretch" class="h-100">
             <mat-card-content class="mb-0 p-0">
@@ -122,7 +122,7 @@
                     span class="mx-2">{{property.published | date:"dd MMMM, yyyy" }}</span>
                 </p> -->
                 <div>
-                    <a [routerLink]="['/voos', voo.url_voo]" mat-stroked-button color="primary" class="uppercase">Ver mais</a>
+                    <a [routerLink]="['/voos', voo.url_voo]" mat-stroked-button color="primary" class="uppercase" style="margin-top: 20px;">Ver mais</a>
                 </div> 
             </mat-card-actions> 
         </div>        

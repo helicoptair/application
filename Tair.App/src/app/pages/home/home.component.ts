@@ -29,6 +29,7 @@ import { ClientsComponent } from '@shared-components/clients/clients.component';
 import { GetInTouchComponent } from '@shared-components/get-in-touch/get-in-touch.component';
 import { VoosService } from '@services/voos.service';
 import { Voos } from '@models/voos';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-home',
@@ -39,6 +40,7 @@ import { Voos } from '@models/voos';
     HeaderMapComponent,
     HeaderVideoComponent,
     MatCardModule,
+    TranslateModule,
     MatChipsModule,
     PropertiesSearchComponent,
     PropertiesSearchResultsFiltersComponent,

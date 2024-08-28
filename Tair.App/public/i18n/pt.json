@@ -1,4 +1,5 @@
 {   
+  "LOCAL": "Aeroporto de Jacarepaguá - RJ", 
   "LOGIN": "Entrar", 
   "LOGOUT": "Sair", 
   "REGISTER": "Cadastrar",
@@ -11,6 +12,18 @@
   "EDIT_PROFILE": "Editar Perfil",
   "LOCK_SCREEN": "Lock screen",
   "HELP": "Ajuda",
+  "QUANTIDADE": "Quantidade de passageiros",
+  "DURACAO": "Duração do voo",
+  "CATEGORIA_VOO": "Categoria do voo",
+  "TIPO_VOO": "Tipo de voo",
+  "PRECO": "Preço",
+  "PRECO_DE": "De",
+  "PRECO_ATE": "Até",
+  "PARCEIROS_HELICOPTAIR": "Parceiros Helicoptair",
+  "PARCEIROS_HELICOPTAIR_TEXTO": "Juntos fazemos um serviço de qualidade e com total segurança e conformidade.",
+  "ENCONTRADOS": "encontrados",
+  "TESTEMONIAL": "O que os passageiros pensam da Helicoptair",
+  "TESTEMONIAL_BTN": "Avaliar empresa",
   "NAV": {  
     "HOME": "Home", 
     "PROPERTIES": "Propriedades", 
@@ -49,5 +62,38 @@
   },
   "FIELD": { 
     "NAME": "Nome" 
+  },
+  "PLACEHOLDER": {
+    "QUANTIDADE": "Selecione a quantidade",
+    "DURACAO": "Selecione a duração",
+    "CATEGORIA_VOO": "Selecione a categoria",
+    "TIPO_VOO": "Selecione o tipo"
+  },
+  "OFERECEMOS": {
+    "TITULO": "O que oferecemos",
+    "VOOS_PANORAMICOS": "Voos Panorâmicos",
+    "VOOS_TRANSLADOS": "Voos Translados",
+    "SERVICOS_FOTOGRAFICOS": "Serviços Fotográficos",
+    "TRANSFER_TERRESTRE": "Transporte",
+    "VOOS_PANORAMICOS_TEXTO": "Oferecemos os voos panorâmicos mais incríveis pelo Rio de Janeiro, sobrevoando os principais pontos turísticos.",
+    "VOOS_TRANSLADOS_TEXTO": "Oferecemos voos executivos para diversos locais, com total conforto e comodidade, além da qualidade excepcional.",
+    "SERVICOS_FOTOGRAFICOS_TEXTO": "Temos parceria com profissionais da área para promover takes do voo para que você desfrute e não se preocupe em fotografar.",
+    "TRANSFER_TERRESTRE_TEXTO": "Temos parceria com empresas de transporte terrestre para realizar todo o trâmite de transporte entre o hotel e o local de decolagem."
+  },
+  "DIFERENCIAIS": {
+    "TITULO": "Nossos Diferenciais",
+    "PRECO_JUSTO": "Preço Justo",
+    "INOVACAO": "Inovação",
+    "EQUIPE_QUALIFICADA": "Equipe Qualificada",
+    "AGENDAMENTO_ONLINE": "Agendamento Online",
+    "PRECO_JUSTO_TEXTO": "A Helicoptair se preocupa com o cliente e busca sempre o melhor custo benefício para que todos possam desfrutar dessa experiência.",
+    "INOVACAO_TEXTO": "Nos preocupamos com as mais avançadas tecnologias e inovações para tornar essa experiência mais agradável a todos nossos clientes.",
+    "EQUIPE_QUALIFICADA_TEXTO": "Toda equipe é altamente treinada e possui todas as certificações necessárias para prover o seu passeio sem risco e com total dedicação.",
+    "AGENDAMENTO_ONLINE_TEXTO": "Faça sua reserva online e nossa equipe entrará em contato para confirmar as informações para que realize seu voo sem preocupações."
+  },
+  "FOOTER": {
+    "TEXTO": "Venha realizar seu sonho de sobrevoar o Rio de Janeiro em um passeio de helicóptero que será épico.",
+    "LOCALIZACAO": "Aeroporto de Jacarepaguá - Barra da Tijuca",
+    "HORARIO": "Decolagens: Todos os dias das 9:00 - 17:00"
   }
 }

@@ -1,4 +1,5 @@
 {   
+  "LOCAL": "Aéroport de Jacarepaguá - RJ", 
   "LOGIN": "S'identifier", 
   "LOGOUT": "Se déconnecter",
   "REGISTER": "S'inscrire", 
@@ -11,6 +12,18 @@
   "EDIT_PROFILE": "Editer le profil",
   "LOCK_SCREEN": "Écran verrouillé",
   "HELP": "Aidez",
+  "QUANTIDADE": "Quantité de passagers",
+  "DURACAO": "Durée du vol",
+  "CATEGORIA_VOO": "Catégorie de vol",
+  "TIPO_VOO": "Type de vol",
+  "PRECO": "Prix",
+  "PRECO_DE": "À partir",
+  "PRECO_ATE": "Jusqu'à",
+  "PARCEIROS_HELICOPTAIR": "Partenaires Hélicoptair",
+  "PARCEIROS_HELICOPTAIR_TEXTO": "Ensemble, nous fournissons un service de qualité en toute sécurité et conformité.",
+  "ENCONTRADOS": "trouvés",
+  "TESTEMONIAL": "Ce que pensent les passagers d'Hélicoptair",
+  "TESTEMONIAL_BTN": "Écrire un avis",
   "NAV": {  
     "HOME": "Accueil", 
     "PROPERTIES": "Propriétés",  
@@ -49,5 +62,38 @@
   },
   "FIELD": { 
     "NAME": "Nom" 
+  },
+  "PLACEHOLDER": {
+    "QUANTIDADE": "Sélectionnez la quantité",
+    "DURACAO": "Sélectionnez la durée",
+    "CATEGORIA_VOO": "Sélectionnez la catégorie",
+    "TIPO_VOO": "Sélectionnez le type"
+  },
+  "OFERECEMOS": {
+    "TITULO": "Ce que nous proposons",
+    "VOOS_PANORAMICOS": "Vols Panoramiques",
+    "VOOS_TRANSLADOS": "Vols de Transfert",
+    "SERVICOS_FOTOGRAFICOS": "Services Photographiques",
+    "TRANSFER_TERRESTRE": "Transport",
+    "VOOS_PANORAMICOS_TEXTO": "Nous proposons les vols panoramiques les plus incroyables au-dessus de Rio de Janeiro, survolant les principales attractions touristiques.",
+    "VOOS_TRANSLADOS_TEXTO": "Nous proposons des vols exécutifs vers différents endroits, avec un confort et une commodité total, en plus d'une qualité exceptionnelle.",
+    "SERVICOS_FOTOGRAFICOS_TEXTO": "Nous avons un partenariat avec des professionnels du domaine pour promouvoir les prises de vue en vol afin que vous puissiez profiter sans vous soucier de prendre des photos.",
+    "TRANSFER_TERRESTRE_TEXTO": "Nous avons des partenariats avec des sociétés de transport terrestre pour effectuer toutes les démarches de transport entre l'hôtel et le lieu de décollage."
+  },
+  "DIFERENCIAIS": {
+    "TITULO": "Nos Différences",
+    "PRECO_JUSTO": "Juste Prix",
+    "INOVACAO": "Innovation",
+    "EQUIPE_QUALIFICADA": "Équipe Qualifiée",
+    "AGENDAMENTO_ONLINE": "Planification en Ligne",
+    "PRECO_JUSTO_TEXTO": "Helicoptair se soucie du client et recherche toujours le meilleur rapport qualité/prix pour que chacun puisse profiter de cette expérience.",
+    "INOVACAO_TEXTO": "Nous nous soucions des technologies et des innovations les plus avancées pour rendre cette expérience plus agréable pour tous nos clients.",
+    "EQUIPE_QUALIFICADA_TEXTO": "Toute l'équipe est hautement qualifiée et possède toutes les certifications nécessaires pour vous offrir un voyage sans risque et avec un dévouement total.",
+    "AGENDAMENTO_ONLINE_TEXTO": "Faites votre réservation en ligne et notre équipe vous contactera pour confirmer les informations afin que vous puissiez effectuer votre vol sans aucun souci."
+  },
+  "FOOTER": {
+    "TEXTO": "Venez réaliser votre rêve de survoler Rio de Janeiro lors d'un vol épique en hélicoptère.",
+    "LOCALIZACAO": "Aéroport de Jacarepaguá - Barra da Tijuca",
+    "HORARIO": "Départs: tous les jours de 9:00 - 17:00"
   }
 }

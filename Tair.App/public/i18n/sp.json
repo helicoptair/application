@@ -1,0 +1,99 @@
+{   
+  "LOCAL": "Aeropuerto de Jacarepaguá - RJ", 
+  "LOGIN": "Acceso", 
+  "LOGOUT": "Cerrar Sesión", 
+  "REGISTER": "Registro",
+  "ACCOUNT": "Cuenta",
+  "SUBMIT_PROPERTY": "Emlak ekle",
+  "MENU": "Menú",
+  "MY_PROPERTIES": "Minhas propiedades",
+  "FAVORITES": "Favoritas",
+  "COMPARE": "Comparar",
+  "EDIT_PROFILE": "Editar perfil",
+  "LOCK_SCREEN": "Pantalla de bloqueo",
+  "HELP": "Ayuda",
+  "QUANTIDADE": "Cantidad de pasajeros",
+  "DURACAO": "Duración del vuelo",
+  "CATEGORIA_VOO": "Categoría de vuelo",
+  "TIPO_VOO": "Tipo de vuelo",
+  "PRECO": "Precio",
+  "PRECO_DE": "De",
+  "PRECO_ATE": "Hasta",
+  "PARCEIROS_HELICOPTAIR": "Socios de helicópteros",
+  "PARCEIROS_HELICOPTAIR_TEXTO": "Juntos brindamos un servicio de calidad con total seguridad y cumplimiento.",
+  "ENCONTRADOS": "encontrados",
+  "TESTEMONIAL": "Lo que piensan los pasajeros sobre Helicoptair",
+  "TESTEMONIAL_BTN": "Escribe una reseña",
+  "NAV": {  
+    "HOME": "Ana Sayfa",
+    "PROPERTIES": "Emlaklar",   
+    "PAGES": "Sayfalar", 
+    "AGENTS": "Ajanlar",
+    "AGENT": "Ajan", 
+    "FAQS": "Faqs",
+    "PRICING": "Fiyatlandırma",
+    "TERMS_CONDITIONS": "Şartlar ve Koşullar",
+    "LANDING": "Landing", 
+    "404_PAGE": "404 Page",
+    "OTHERS": "Diğerleri",
+    "EXTERNAL_LINK": "Harici Bağlantı",
+    "MENU_ITEM": "Menü",
+    "CONTACT": "İletişim",
+    "ABOUT_US": "Hakkımızda",
+    "ADMIN": "Admin"
+  }, 
+  "BTN": {
+    "ADD": "Agregar",
+    "SAVE": "Salvar",
+    "SUBMIT": "Entregar",
+    "CANCEL": "Cancelar",
+    "UPLOAD": "Upload",
+    "REMOVE": "Eliminar",
+    "YES": "Si",
+    "NO": "No",
+    "OK": "Ok",
+    "CLEAR": "Limpiar",
+    "ADVANCED": "Avanzado",
+    "HIDE": "Esconder"
+  },
+  "MESSAGE": {
+    "SURE_DELETE": "¿Estás segura de que quieres eliminarlo?",
+    "FILE_SIZE": "El tamaño del archivo no puede exceder {{param}} kb."
+  },
+  "FIELD": { 
+    "NAME": "Nombre" 
+  },
+  "PLACEHOLDER": {
+    "QUANTIDADE": "Seleccione cantidad",
+    "DURACAO": "Seleccionar duración",
+    "CATEGORIA_VOO": "Seleccionar categoría",
+    "TIPO_VOO": "Seleccionar tipo"
+  },
+  "OFERECEMOS": {
+    "TITULO": "Lo que ofrecemos",
+    "VOOS_PANORAMICOS": "Vuelos Panorámicos",
+    "VOOS_TRANSLADOS": "Vuelos de Transferencia",
+    "SERVICOS_FOTOGRAFICOS": "Servicios Fotográficos",
+    "TRANSFER_TERRESTRE": "Transporte",
+    "VOOS_PANORAMICOS_TEXTO": "Ofrecemos los más increíbles vuelos panorámicos sobre Río de Janeiro, sobrevolando los principales atractivos turísticos.",
+    "VOOS_TRANSLADOS_TEXTO": "Ofrecemos vuelos ejecutivos a diferentes localidades, con total comodidad y conveniencia, además de una calidad excepcional.",
+    "SERVICOS_FOTOGRAFICOS_TEXTO": "Contamos con una alianza con profesionales en la materia para promover tomas del vuelo para que puedas disfrutar y no preocuparte por tomar fotos.",
+    "TRANSFER_TERRESTRE_TEXTO": "Contamos con alianzas con empresas de transporte terrestre para realizar todos los trámites de transporte entre el hotel y el lugar de despegue."
+  },
+  "DIFERENCIAIS": {
+    "TITULO": "Nuestras Diferencias",
+    "PRECO_JUSTO": "Precio Justo",
+    "INOVACAO": "Innovación",
+    "EQUIPE_QUALIFICADA": "Equipo Calificado",
+    "AGENDAMENTO_ONLINE": "Programación en Línea",
+    "PRECO_JUSTO_TEXTO": "Helicoptair se preocupa por el cliente y busca siempre la mejor relación calidad-precio para que todos puedan disfrutar de esta experiencia.",
+    "INOVACAO_TEXTO": "Nos preocupamos por las tecnologías e innovaciones más avanzadas para hacer esta experiencia más placentera para todos nuestros clientes.",
+    "EQUIPE_QUALIFICADA_TEXTO": "Todo el equipo está altamente capacitado y cuenta con todas las certificaciones necesarias para brindar tu viaje sin riesgos y con total dedicación.",
+    "AGENDAMENTO_ONLINE_TEXTO": "Haz tu reserva online y nuestro equipo se pondrá en contacto contigo para confirmar la información y que puedas realizar tu vuelo sin preocupaciones."
+  },
+  "FOOTER": {
+    "TEXTO": "Ven a cumplir tu sueño de volar sobre Río de Janeiro en un paseo épico en helicóptero.",
+    "LOCALIZACAO": "Aeropuerto de Jacarepaguá - Barra da Tijuca",
+    "HORARIO": "Salidas: Todos los días de 9:00 - 17:00"
+  }
+}
