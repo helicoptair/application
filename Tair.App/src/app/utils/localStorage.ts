@@ -1,23 +1,35 @@
 export class LocalStorageUtils {
-
     public salvarUsuarioSession(user: string) {
-        sessionStorage.setItem('user', JSON.stringify(user));
+        if (typeof window !== 'undefined') {
+            sessionStorage.setItem('user', JSON.stringify(user));
+        }
     }
 
     public salvarTokenUsuarioSession(token: string) {
-        sessionStorage.setItem('token', token);
+        if (typeof window !== 'undefined') {
+            sessionStorage.setItem('token', token);
+        }
     }
 
-    public obterTokenUsuarioSession(): string {
-        return sessionStorage.getItem('token')!;
+    public obterTokenUsuarioSession(): string | null {
+        if (typeof window !== 'undefined') {
+            return sessionStorage.getItem('token');
+        }
+        return null;
     }
 
     public obterUsuarioSession() {
-        return JSON.parse(sessionStorage.getItem('user')!);
+        if (typeof window !== 'undefined') {
+            return JSON.parse(sessionStorage.getItem('user')!);
+        }
+        return null;
     }
 
     public obterUsuarioIdSession() {
-        return JSON.parse(sessionStorage.getItem('user.id')!);
+        if (typeof window !== 'undefined') {
+            return JSON.parse(sessionStorage.getItem('user.id')!);
+        }
+        return null;
     }
 
     public salvarDadosLocaisUsuarioSession(response: any) {
@@ -26,8 +38,9 @@ export class LocalStorageUtils {
     }
 
     public limparDadosLocaisUsuarioSession() {
-        sessionStorage.removeItem('token');
-        sessionStorage.removeItem('user');
+        if (typeof window !== 'undefined') {
+            sessionStorage.removeItem('token');
+            sessionStorage.removeItem('user');
+        }
     }
-
 }
