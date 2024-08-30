@@ -22,6 +22,14 @@ export function app(): express.Express {
     maxAge: '1y',
   }));
 
+  server.post('/stripe/create-session', (req, res) => {
+    res.send('Stripe session created');
+  });
+
+  server.post('/stripe/refund-charge/:id', (req, res) => {
+    res.send(`Refund charge with ID ${req.params.id}`);
+  });
+
   // All regular routes use the Angular engine
   server.get('/*', (req, res, next) => {
     const { protocol, originalUrl, baseUrl, headers } = req;
